@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lajitha-Portfolio</title>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav aria-label="Main navigation">
+    <ul>
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#terms">Tech Terms</a>
+      <a href="#contact">Contact</a>
+    </ul>
+  </nav>
+
+  <header id="home">
+    <h1>Lajitha A - UI/UX Designer</h1>
+    <p>Designing clear user journeys and thoughtful interfaces.</p>
+  </header>
+
+  <main>
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm a product-minded UI/UX designer focusing on <strong>accessibility</strong>,
+        <strong>usability</strong>, and practical design systems.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <article>
+        <h3>FocusNotes</h3>
+        <p>Minimal notebook app - search, tags, and offline-first behavior.</p>
+      </article>
+
+      <article>
+        <h3>Interactive Business Card Bot</h3>
+        <p>Conversational flow for quick contact sharing and lead capture.</p>
+      </article>
+    </section>
+
+    <!-- PRICING / DETAILS TABLE -->
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <p>Choose a plan that fits your project's needs.</p>
+
+      <table border="1" cellpadding="6" cellspacing="0">
+        <caption><strong>Design Packages</strong></caption>
+        <thead>
+          <tr>
+            <th scope="col">Plan</th>
+            <th scope="col">Price (INR)</th>
+            <th scope="col">Delivery</th>
+            <th scope="col">Includes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Starter</th>
+            <td>10,000</td>
+            <td>1 week</td>
+            <td>Wireframes, basic mockups</td>
+          </tr>
+          <tr>
+            <th scope="row">Pro</th>
+            <td>25,000</td>
+            <td>2 weeks</td>
+            <td>Wireframes, prototypes, usability test</td>
+          </tr>
+          <tr>
+            <th scope="row">Enterprise</th>
+            <td>75,000+</td>
+            <td>Negotiable</td>
+            <td>Design system, handoff, iterations</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- DEFINITION LIST FOR TECHNICAL TERMS -->
+    <section id="terms">
+      <h2>Technical Terms</h2>
+      <dl>
+        <dt>Wireframe</dt>
+        <dd>A low-fidelity visual guide representing the skeletal framework of a design.</dd>
+
+        <dt>Prototype</dt>
+        <dd>An interactive mock that demonstrates user flows and interactions.</dd>
+
+        <dt>Usability Testing</dt>
+        <dd>Testing with real users to identify issues and improve the product experience.</dd>
+      </dl>
+    </section>
+
+    <!-- STRUCTURED DATA: NESTED LISTS FOR FEATURES -->
+    <section id="features">
+      <h2>Features (Structured)</h2>
+      <ul>
+        <li>
+          FocusNotes (App)
+          <ul>
+            <li>Offline-first</li>
+            <li>Fast search</li>
+            <li>Tags
+              <ul>
+                <li>ideas</li>
+                <li>todos</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          Business Card Bot
+          <ul>
+            <li>Quick capture</li>
+            <li>Shareable link</li>
+            <li>Integration options
+              <ul>
+                <li>Email</li>
+                <li>vCard</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- CONTACT FORM AT BOTTOM -->
+  <footer id="contact">
+    <h2>Contact</h2>
+    <p>If you'd like to work together, send a message below.</p>
+
+    <form method="post" action="">
+      <label for="contact-name">Name</label><br>
+      <input type="text" id="contact-name" name="name" required><br>
+
+      <label for="contact-email">Email</label><br>
+      <input type="email" id="contact-email" name="email" required><br>
+
+      <label for="contact-subject">Subject</label><br>
+      <select id="contact-subject" name="subject" required>
+        <option value="">Select a subject</option>
+        <option value="project">Project Inquiry</option>
+        <option value="intern">Internship</option>
+        <option value="other">Other</option>
+      </select><br>
+
+      <label for="contact-message">Message</label><br>
+      <textarea id="contact-message" name="message" rows="4" cols="40" required></textarea><br>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p><small>I'll respond within 24–48 hours.</small></p>
+  </footer>
+
+</body>
+</html>

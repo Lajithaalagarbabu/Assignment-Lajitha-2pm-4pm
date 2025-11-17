@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Build a student registration form with validation</h2>
+    <form method="post" action="">
+        <!-- NAME -->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- EMAIL -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- AGE -->
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="1" max="120" required>
+
+        <!-- COURSE -->
+
+        <label for="course">Course</label>
+        <select id="course" name="course" required>
+            <option value="">Select a course</option>
+            <option value="JAVA">JAVA</option>
+            <option value=".NET">.NET</option>
+            <option value="MERN STACK">MERN STACK</option>
+            <option value="DATA SCIENCE">DATA SCIENCE</option>
+        </select>
+               
+        <!-- SUBMIT BUTTON -->
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
