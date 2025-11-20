@@ -1,0 +1,33 @@
+/* No padding anywhere */
+* {
+    padding: 0;
+    margin: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Attribute-based styling for images */
+img[type="thumbnail"] {
+    width: 200px;
+    border: 2px solid green;
+}
+
+img[type="wide"] {
+    width: 200px;
+    border: 2px solid blue;
+}
+
+/* Attribute-based styling for buttons */
+button[type="buy"] {
+    background-color: red;
+    color: white;
+    border: none;
+    margin-top: 5px;
+}
+
+button[type="cart"] {
+    background-color: brown;
+    color: white;
+    border: none;
+    margin-top: 5px;
+}

@@ -1,0 +1,30 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+    margin: 0;
+    padding: 50px;
+}
+
+/* style inputs */
+input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* text input */
+input[type="text"] {
+    border: 2px solid green;
+}
+
+/* password input */
+input[type="password"] {
+    border: 2px solid orange;
+}
+
+/* submit button */
+input[type="submit"] {
+    background: green;
+    color: white;
+    border: none;
+}

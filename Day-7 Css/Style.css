@@ -1,0 +1,72 @@
+h2{
+    background-color: rgb(142, 188, 234);
+    text-align: center;
+    color: tomato;
+}
+/* Type Selector */
+p {
+    color: blue;
+    font-size: 18px;
+}
+
+/* Class Selector */
+.content-box {
+    background-color: rgb(61, 238, 132);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Universal Selector */
+* {
+    background-color: yellow;
+    font-weight: bold; 
+    color: red; 
+    margin: 0;
+    padding: 0;
+}
+
+/* ID Selector*/
+#special-section {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+}
+
+/* Group Tag */
+h4,h5,h6 {
+    color: purple;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: medium;
+}
+
+/* Style input fields with type="text" */
+input[type="text"] {
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Style input fields with type="password" */
+input[type="password"] {
+    border: 2px solid red;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #fff0f0;
+}
+
+/* Style only submit button */
+input[type="submit"] {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: gray;
+}

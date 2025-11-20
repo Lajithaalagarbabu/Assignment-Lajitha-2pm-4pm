@@ -1,0 +1,30 @@
+/* Main title styling using ID */
+#name {
+    text-align: center;
+    font-size: 35px;
+    color: darkblue;
+  
+}
+
+/* Section headings using class */
+.section-title {
+    color: white;
+    background-color: navy;
+    font-size: 22px;
+    
+}
+
+/* General text styling */
+.text {
+    font-size: 18px;
+   
+}
+
+/* Styling for textarea */
+.project-box {
+    width: 90%;
+    height: 100px;
+   
+    border: 2px solid gray;
+    font-size: 16px;
+}

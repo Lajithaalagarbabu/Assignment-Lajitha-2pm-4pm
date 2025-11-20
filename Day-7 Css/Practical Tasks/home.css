@@ -1,0 +1,37 @@
+/* ID selectors */
+#top {
+    color: white;
+    text-align: center;
+   
+}
+img {
+    width: 500px;
+    height: auto;
+}
+#footer {
+    
+    color: white;;
+    text-align: center;
+  }
+
+/* Class selectors */
+.about {
+    
+    color: white;
+    text-align: center;
+    
+}
+
+.services {
+    
+    color: white;
+    text-align: center;
+    
+}
+
+/* Universal selector */
+* {
+    background-color: seagreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
