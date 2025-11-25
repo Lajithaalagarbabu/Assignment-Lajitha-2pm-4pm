@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badge</title>
+</head>
+<style>
+    .icon-container {
+  position: relative;  
+  display: inline-block;
+}
+
+.bell-icon {
+  width: 40px;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;      /* move upward */
+  right: -5px;    /* move to right */
+  background: red;
+  color: white;
+  padding: 4px 6px;
+  font-size: 12px;
+  border-radius: 50%;
+  min-width: 20px;
+  min-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+</style>
+<body>
+    <div class="icon-container">
+  <img src="https://cdn-icons-png.flaticon.com/512/1827/1827370.png" class="bell-icon">
+  <span class="badge">5</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo: Hero + Sticky Nav + Project BGs</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    
+    * { box-sizing: border-box;
+         margin: 0; 
+         padding: 0; }
+    html,body { height: 100%; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height: 1.45;
+      color: #111;
+      background: #f6f7fb;
+      
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      z-index: 1000;
+      background: rgba(255,255,255,0.85); 
+      border-bottom: 1px solid rgba(16,24,40,0.06);
+    }
+    .nav .brand {
+      font-weight: 800;
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+    }
+    .nav .links {
+      display: flex;
+      gap: 16px;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #111827;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 8px;
+    }
+    .nav a { background: rgba(16,24,40,0.03); }
+
+   
+    main { padding-top: 84px; }
+
+    
+    .hero {
+      min-height: 76vh;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: visible;
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+      
+      background:
+        linear-gradient(135deg, rgba(10, 25, 47, 0.75), rgba(7, 102, 70, 0.45)),
+        url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    .hero .container {
+      max-width: 980px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: clamp(28px, 5vw, 56px);
+      margin-bottom: 12px;
+      text-shadow: 0 6px 18px rgba(3,10,25,0.5); /* text shadow for title */
+    }
+    .hero p.lead {
+      font-size: bold;
+      margin-bottom: 22px;
+    }
+    .cta-row { display:flex; gap:12px; justify-content:center; }
+
+    .btn {
+      background: linear-gradient(90deg,#0ea5a4,#06b6d4);
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(6,95,84,0.15);
+    }
+    .btn.secondary {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    
+    .profile-card {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -48px; 
+      width: min(920px, 92%);
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      box-shadow: 0 12px 40px rgba(8,15,40,0.08);
+      z-index: 50; 
+    }
+    .profile-card img {
+      width: 76px;
+      height: 76px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+    .profile-card .meta { flex: 1; }
+    .profile-card h3 { margin-bottom: 4px; font-size: 18px; }
+    .profile-card p { color: #475569; font-size: 14px; }
+
+    
+    .section {
+      padding: 84px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .project {
+      min-height: 220px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 16px;
+      color: white;
+      box-shadow: 0 8px 28px rgba(2,6,23,0.08);
+    }
+    .project::after {
+      
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.45));
+      z-index: 0;
+    }
+    .project .inner {
+      position: relative;
+      z-index: 2;
+    }
+    .project h4 {
+      font-family: "Playfair Display", serif;
+      margin-bottom: 6px;
+      text-shadow: 0 4px 14px rgba(2,6,23,0.5);
+    }
+    .project p { font-size: 13px; opacity: 0.95; }
+
+    /* background images for each project (replace URLs) */
+    .project.p-1 { background-image: url('https://images.unsplash.com/photo-1523475496153-3d6ccf7d03d3?auto=format&fit=crop&w=1200&q=70'); background-size: cover; background-position: center; }
+    .project.p-2 { background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=70'); background-size: cover; background-position: center; }
+    .project.p-3 { background-image: url('https://images.unsplash.com/photo-1508385082359-fc6a60f3e0f4?auto=format&fit=crop&w=1200&q=70'); background-size: cover; background-position: center; }
+
+    /* ---------- Text shadow for section titles ---------- */
+    .section h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      margin-bottom: 18px;
+      text-shadow: 0 6px 18px rgba(16,24,40,0.06);
+    }
+
+    
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      color: #475569;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <header class="nav">
+    <div class="brand">MyBrand</div>
+    <nav class="links" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Beautiful UI, built with simple CSS</h1>
+        <p class="lead">Hero section with a gradient overlay for contrast, better typography from Google Fonts and clear CTAs.</p>
+        <div class="cta-row">
+          <button class="btn">Get Started</button>
+          <button class="btn secondary">Learn More</button>
+        </div>
+      </div>
+
+      
+      <div class="profile-card" role="region" aria-label="Profile card">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=70" alt="avatar">
+        <div class="meta">
+          <h3>Buddy — Frontend Designer</h3>
+          <p>Designing clean UIs, working on components, and building delightful web experiences.</p>
+        </div>
+        <div style="display:flex; gap:8px;">
+          <button class="btn" style="padding:10px 12px;">Follow</button>
+        </div>
+      </div>
+    </section>
+
+    
+    <div style="height:64px"></div>
+
+   
+    <section id="projects" class="section">
+      <h2>Selected Projects</h2>
+      <div class="projects" 
+        <article class="project p-1" >
+          <div class="inner">
+            <h4>Project One</h4>
+            <p>Marketing landing with animation & responsive layout.</p>
+          </div>
+        </article>
+
+        <article class="project p-2" >
+          <div class="inner">
+            <h4>Project Two</h4>
+            <p>E-commerce gallery with progressive image loading.</p>
+          </div>
+        </article>
+
+        <article class="project p-3" >
+          <div class="inner">
+            <h4>Project Three</h4>
+            <p>Design system components & utility-first CSS patterns.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+ 
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p style="max-width:760px">This demo shows how to combine modern UI details: gradient hero overlays, Google Fonts for improved typography, a fixed navbar that uses backdrop blur, project sections with background images, subtle text shadows for titles, and z-index layering so componen

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 boxes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+NSW:wght@100..400&family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+       .boxx {
+          display: flex;
+          gap: 20px;
+        }
+        .box{
+            width: 100px;
+             height:100px;
+        }
+        .para{
+             font-family: "Playwrite AU NSW", cursive;
+             font-optical-sizing: auto;
+             font-weight: bold;
+             font-style: normal;
+        }
+        .ee{
+            width: 120px;
+            padding: 10px;
+            columns: white;
+            position: fixed;
+            background-color: brown;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Make 4 boxes each using a different color format.</h3>
+    <div class="boxx">
+    <div class="box" style="background-color:darkblue; color:white; ">Box1</div>
+    <div class="box" style="background-color:rgb(181, 227, 14); color:white;" >Box2</div>
+    <div class="box" style="background-color:rgb(224, 17, 197); color:white;">Box3</div>
+    <div class="box" style="background-color:rgb(40, 181, 197); color:white;">Box4</div>
+    </div>
+     <h3>Create a section with a linear gradient background.</h3>
+
+     <div style=" 
+  background-image: linear-gradient(to bottom, red, yellow);
+   width:150px; height:150px; text-align:center">Linear gradient</div>
+
+   <h3>Style a paragraph with custom fonts and spacing.</h3>
+   <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil obcaecati illo eaque incidunt itaque dolorum voluptate delectus ea et quod!</p>4
+
+   <h3>Add underline, uppercase, and text shadow to a heading.</h3>
+   <h3 style="color: rgb(4, 240, 161);  text-decoration-line: underline;" >underline</h3>
+   <h3 style="color: chartreuse; text-transform: uppercase;">uppercase</h3>
+   <h3 style="color: crimson; text-shadow: rgb(237, 213, 152) 2px 2px">text shadow</h3>
+
+   <h3>Make an element fixed to bottom-right of the page.</h3>
+   <h2 class="ee">Element</h2>
+
+</body>
+</html>
