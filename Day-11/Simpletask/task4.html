@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Align-Self</title>
+<style>
+  .flex-container {
+    display: flex;
+    height: 150px;
+    background: #e0f2fe;
+    align-items: center; /* default alignment for ALL items */
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .item {
+    background: #38bdf8;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+  }
+
+  /* One special item with its own alignment */
+  .special {
+    align-self: flex-start;   /* ONLY this item moves to top */
+  }
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+  <div class="item">Item 1</div>
+  <div class="item special">Special Item</div>
+  <div class="item">Item 3</div>
+</div>
+
+</body>
+</html>

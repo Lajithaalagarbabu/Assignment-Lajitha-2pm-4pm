@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Grid Photo Gallery</title>
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 15px;                             /* spacing between photos */
+    padding: 20px;
+    background: #f1f5f9;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;                     /* makes images neat */
+    border-radius: 10px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery {
+      grid-template-columns: 1fr;           /* 1 column on mobile */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <img src="https://images.unsplash.com/photo-1764069970723-eff3e12de883?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D" alt="Photo 1">
+  <img src="https://images.unsplash.com/photo-1763995687854-580a8aad3c9f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Photo 2">
+  <img src="https://images.unsplash.com/photo-1763996313498-8c60ed0610ac?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDExfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Photo 3">
+  <img src="https://images.unsplash.com/photo-1764083572103-d860aa226bf3?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE5fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Photo 4">
+  <img src="https://images.unsplash.com/photo-1763688506289-5d9d5c35ffed?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI0fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Photo 5">
+  <img src="https://images.unsplash.com/photo-1763641302132-d27dad02a19a?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM4fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Photo 6">
+</div>
+
+</body>
+</html>

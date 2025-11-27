@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Float Left Example</title>
+<style>
+  .img-left {
+    float: left;         /* pushes image to left */
+    width: 180px;        /* set size */
+    margin: 10px 15px 10px 0;  /* space between image & text */
+    border-radius: 8px;
+  }
+
+  /* optional: clear float after the section */
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .clearfix{
+     background-color: rgb(241, 241, 78);
+  }
+</style>
+</head>
+<body>
+
+<div class="clearfix">
+  <img src="https://images.unsplash.com/photo-1694954665440-134270e980e3?q=80&w=857&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sample" class="img-left">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, 
+    turpis id varius sodales, velit risus tristique lacus, vitae luctus 
+    nisi justo quis odio. Suspendisse potenti. Mauris blandit arcu id 
+    mauris luctus, eget tincidunt massa convallis. Curabitur vitae felis 
+    nec magna placerat suscipit. Nulla facilisi. Donec feugiat, ipsum at 
+    aliquet posuere, quam neque rutrum libero, eget viverra urna nulla at 
+    sapien.
+  </p>
+</div>
+
+</body>
+</html>

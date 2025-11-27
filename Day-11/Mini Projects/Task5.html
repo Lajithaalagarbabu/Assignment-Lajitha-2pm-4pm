@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Grid Template Areas Layout</title>
+<style>
+
+  /* Full page grid */
+  .layout {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* sidebar + content */
+    grid-template-rows: 70px 1fr 60px; /* header + content + footer */
+    grid-template-areas:
+      "header header"
+      "sidebar content"
+      "footer footer";
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #e2e8f0;
+  }
+
+  /* Areas */
+  header {
+    grid-area: header;
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+    border-radius: 8px;
+  }
+
+  aside {
+    grid-area: sidebar;
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  main {
+    grid-area: content;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  footer {
+    grid-area: footer;
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  img{
+    height: 300px;
+    width: 300px;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <header>Header</header>
+
+  <aside>Sidebar</aside>
+
+  <main>
+    <h2>Main Content</h2>
+    <p>This is the content area in the grid layout.</p>
+    <img src="https://images.unsplash.com/photo-1763760243463-cbfb66c7fcc3?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM5fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="">
+  </main>
+
+  <footer>Footer</footer>
+
+</div>
+
+</body>
+</html>
