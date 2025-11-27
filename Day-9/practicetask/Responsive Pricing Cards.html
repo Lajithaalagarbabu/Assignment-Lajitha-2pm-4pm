@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pricing Cards</title>
+    <style>
+        .pricing{
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card{
+            flex: 1;
+            background-color: rgb(101, 165, 238);
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        @media(max-width: 700px){  /* Responsive: stack to 1 column */
+            .pricing{
+                flex-direction: column;
+            }
+        }
+        button{
+            border-radius: 20px;
+            background-color: deeppink;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="pricing">
+        <div class="card">
+            <h3>Basic</h3>
+            <p>Rs.19/month</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <h3>Standard</h3>
+            <p>Rs.49/month</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <h3>Premium</h3>
+            <p>Rs.99/month</p>
+            <button>Buy</button>
+        </div>
+    </div>
+
+</body>
+</html>
