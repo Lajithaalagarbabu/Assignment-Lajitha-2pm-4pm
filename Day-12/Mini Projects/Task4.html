@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Toolbar</title>
+    <style>
+    .toolbar{
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: rgb(169, 235, 208);
+        border-radius: 8px;
+        gap: 20px;
+    }
+    .search{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .search input{
+        width: 60%;
+        padding: 6px 10px;
+        font-size: 16px;
+    }
+    .actions button{
+        margin-left: 10px;
+        padding: 6px 12px;
+    }
+    </style>
+</head>
+<body>
+
+<div class="toolbar">
+  <!-- Left filters -->
+  <div class="filters">
+    <select>
+      <option>All</option>
+      <option>Active</option>
+      <option>Completed</option>
+    </select>
+    <select>
+      <option>Category 1</option>
+      <option>Category 2</option>
+    </select>
+  </div>
+
+  <!-- search -->
+  <div class="search">
+    <input type="text" placeholder="Search...">
+  </div>
+
+  <!-- Actions -->
+  <div class="actions">
+    <button>Add</button>
+    <button>Export</button>
+  </div>
+</div>
+
+</body>
+</html>
