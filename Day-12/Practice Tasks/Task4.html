@@ -3,34 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Nav Bar</title>
+  <title>Vertical Center Box</title>
   <style>
-    .navbar{
-      height: 60px;
-      background-color: rgb(231, 237, 147);
+    body{
+      margin: 0;
+      height: 100vh;  
       display: flex;
       justify-content: center; 
-      align-items: center;     
-      gap: 20px;               
+      align-items: center; 
     }
-    .navbar a{
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 500;
+    .container{
+      display: flex;
+      flex-direction: column; 
+      gap: 20px;   
+      width: 200px;  
     }
-   
+    .block{
+      background-color:darkkhaki;
+      padding: 20px;
+      text-align: center;
+      border-radius: 6px;
+      font-size: 18px;
+    }
   </style>
 </head>
 <body>
 
-  <div class="navbar">
-    <a href="#" style="background-color: red; border-radius :20px; padding:5px;">Home</a>
-    <a href="#" style="background-color: red; border-radius :20px; padding:5px;">About</a>
-    <a href="#" style="background-color: red; border-radius :20px; padding:5px;">Services</a>
-    <a href="#" style="background-color: red; border-radius :20px; padding:5px;">Contact</a>
-    <a href="#" style="background-color: red; border-radius :20px; padding:5px;">Help</a>
+  <div class="container">
+    <div class="block">Block 1</div>
+    <div class="block">Block 2</div>
+    <div class="block">Block 3</div>
   </div>
-   
+
 </body>
 </html>
