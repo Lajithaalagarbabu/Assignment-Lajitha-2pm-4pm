@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Section</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .services {
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .services h2 {
+            margin-bottom: 20px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .card p {
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="services">
+        <h2>Our Services</h2>
+
+        <div class="service-grid">
+
+            <!-- Card 1 -->
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>We build fast, modern, responsive websites.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <h3>UI / UX Design</h3>
+                <p>Clean, user-friendly, and creative design layouts.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <h3>App Development</h3>
+                <p>Android and iOS mobile application development.</p>
+            </div>
+
+            <!-- Card 4 (Optional) -->
+            <div class="card">
+                <h3>Digital Marketing</h3>
+                <p>SEO, social media marketing, and brand promotion.</p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

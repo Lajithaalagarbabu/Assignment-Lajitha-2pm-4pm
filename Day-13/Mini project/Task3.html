@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+
+    <style>
+        .product-grid {
+            display: grid;
+            gap: 20px; /* equal spacing */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            padding: 20px;
+            background: #f2f2f2;
+        }
+
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            margin: 10px 0 5px;
+        }
+
+        .product p {
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align:center;">Product Grid</h2>
+
+    <div class="product-grid">
+        <div class="product">
+            <img src="https://picsum.photos/200/160?1" alt="">
+            <h3>Product 1</h3>
+            <p>$19.99</p>
+        </div>
+
+        <div class="product">
+            <img src="https://picsum.photos/200/160?2" alt="">
+            <h3>Product 2</h3>
+            <p>$29.99</p>
+        </div>
+
+        <div class="product">
+            <img src="https://picsum.photos/200/160?3" alt="">
+            <h3>Product 3</h3>
+            <p>$24.99</p>
+        </div>
+
+        <div class="product">
+            <img src="https://picsum.photos/200/160?4" alt="">
+            <h3>Product 4</h3>
+            <p>$14.99</p>
+        </div>
+    </div>
+
+</body>
+</html>

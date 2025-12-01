@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "left right"
+                "footer footer";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 300px auto;
+            gap: 10px;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        header {
+            grid-area: header;
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .left {
+            grid-area: left;
+            background: #ffffff;
+            padding: 20px;
+            border: 2px solid #ddd;
+        }
+
+        .right {
+            grid-area: right;
+            background: #ffffff;
+            padding: 20px;
+            border: 2px solid #ddd;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>Landing Page Header</header>
+
+        <div class="left">
+            <h2>Left Section</h2>
+            <p>This is the main content area.</p>
+        </div>
+
+        <div class="right">
+            <h2>Right Section</h2>
+            <p>This is the side content.</p>
+        </div>
+
+        <footer>© <strong>SLA</strong> - Built with CSS Grid template areas • All rights reserved</footer>
+
+    </div>
+
+</body>
+</html>

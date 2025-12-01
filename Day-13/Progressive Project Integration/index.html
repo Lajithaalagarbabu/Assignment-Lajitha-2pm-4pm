@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Grid Examples</title>
+
+<style>
+    body {
+        font-family: Arial;
+        padding: 20px;
+        background: #f5f5f5;
+    }
+
+    h2 { margin-top: 40px; }
+    .box { background: white; padding: 15px; border: 1px solid #ddd; }
+
+    .page {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "sidebar content"
+            "footer footer";
+        grid-template-columns: 200px 1fr;
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+    header { grid-area: header; }
+    aside { grid-area: sidebar; }
+    main { grid-area: content; }
+    footer { grid-area: footer; }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    .gallery div {
+        height: 120px;
+        background: #bbb;
+    }
+
+ 
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+    .product {
+        background: white;
+        padding: 15px;
+        display: flex;
+        flex-direction: column; /* Flex inside grid item */
+        gap: 10px;
+        border: 1px solid #ddd;
+    }
+    .product .actions {
+        margin-top: auto;       /* push buttons to bottom */
+        display: flex;
+        gap: 10px;
+    }
+
+  
+    .pricing {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    .plan {
+        background: white;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+   
+    .dashboard {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        grid-template-rows: 50px auto;
+        grid-template-areas:
+            "side top"
+            "side main";
+        gap: 10px;
+    }
+    .side { grid-area: side; }
+    .top { grid-area: top; }
+    .main { grid-area: main; }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+
+</head>
+<body>
+
+<!-- 1. SIMPLE PAGE LAYOUT -->
+<h2>1. Page Layout (Grid Areas)</h2>
+<div class="page">
+    <header class="box">Header</header>
+    <aside class="box">Sidebar</aside>
+    <main class="box">Main Content</main>
+    <footer class="box">Footer</footer>
+</div>
+
+<!-- 2. GALLERY -->
+<h2>2. Gallery (auto-fill + minmax)</h2>
+<div class="gallery">
+    <div></div><div></div><div></div><div></div><div></div>
+</div>
+
+<!-- 3. PRODUCT GRID -->
+<h2>3. Product Grid (Grid + Flex inside)</h2>
+<div class="products">
+    <div class="product">
+        <h3>Product 1</h3>
+        <p>$10</p>
+        <div class="actions">
+            <button>View</button>
+            <button>Add</button>
+        </div>
+    </div>
+    <div class="product">
+        <h3>Product 2</h3>
+        <p>$12</p>
+        <div class="actions">
+            <button>View</button>
+            <button>Add</button>
+        </div>
+    </div>
+</div>
+
+<!-- 4. PRICING TABLE -->
+<h2>4. Pricing Table</h2>
+<div class="pricing">
+    <div class="plan">Free</div>
+    <div class="plan">Pro</div>
+    <div class="plan">Enterprise</div>
+</div>
+
+<!-- 5. DASHBOARD -->
+<h2>5. Dashboard Layout</h2>
+<div class="dashboard">
+    <div class="box side">Sidebar</div>
+    <div class="box top">Topbar</div>
+
+    <div class="box main">
+        <div class="stats">
+            <div class="box">Stat 1</div>
+            <div class="box">Stat 2</div>
+            <div class="box">Stat 3</div>
+        </div>
+
+        <div class="box">Main Content Area</div>
+    </div>
+</div>
+
+</body>
+</html>
