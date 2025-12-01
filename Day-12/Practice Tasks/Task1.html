@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid using 1fr 1f</title>
-    <style>
-    .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 20px;
-    padding: 20px;
-    background: #4e6377;
-  }
-  
-  .box {
-    background: #e8f838;
-    color: black;
-    padding: 20px;
-    border-radius: 8px;
-    font-size: 18px;
-  }
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Nav Bar</title>
+  <style>
+    .navbar{
+      height: 60px;
+      background-color: rgb(204, 218, 9);
+      display: flex;
+      justify-content: center; 
+      align-items: center;     
+      gap: 20px;               
+    }
+    .navbar a{
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  </style>
 </head>
 <body>
-  <div class="grid-container">
-  <div class="box">Column 1 (1fr)</div>
-  <div class="box">Column 2 (1fr)</div>
+
+  <div class="navbar">
+    <a href="#" style="background-color: red; border-radius :20px; padding:5px;">Home</a>
+    <a href="#" style="background-color: red; border-radius :20px; padding:5px;">About</a>
+    <a href="#" style="background-color: red; border-radius :20px; padding:5px;">Services</a>
+    <a href="#" style="background-color: red; border-radius :20px; padding:5px;">Contact</a>
+    <a href="#" style="background-color: red; border-radius :20px; padding:5px;">Help</a>
   </div>
+   
 </body>
 </html>
