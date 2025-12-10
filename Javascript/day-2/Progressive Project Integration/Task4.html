@@ -1,0 +1,16 @@
+<input type="number" id="marks" placeholder="Enter your marks">
+<button onclick="checkResult()">Check Result</button>
+
+<p id="resultText"></p>
+
+<script>
+  function checkResult() {
+    let m = Number(marks.value);
+
+    if (m >= 35) {
+      resultText.innerText = "You Passed";
+    } else {
+      resultText.innerText = "You Failed";
+    }
+  }
+</script>

@@ -1,0 +1,14 @@
+<input id="nameInput" placeholder="Enter your name">
+<button onclick="checkForm()">Submit</button>
+
+<script>
+  function checkForm() {
+    let userName = nameInput.value;
+
+    if (userName === "") {
+      console.log("Name is required");
+    } else {
+      console.log("Form is valid");
+    }
+  }
+</script>

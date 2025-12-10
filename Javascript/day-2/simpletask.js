@@ -9,7 +9,7 @@ const c=20;
 
 let s = "Hello";   // string
 let n = 45;        // number
-let bo = true;      // boolean
+let bo = true;     // boolean
 let x = null;      // null
 
 console.log(typeof s);  // "string"
@@ -30,4 +30,13 @@ if(a==b){
 }
 if(b === c){
     console.log("Strightly equal");
+}
+
+//Write an if-else to check if a number is even or odd.
+
+if(a%10==0){
+    console.log("Its a even Number");
+}
+else{
+    console.log("Its a Odd number");
 }

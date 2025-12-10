@@ -1,0 +1,15 @@
+<input type="number" id="price" placeholder="Price">
+<input type="number" id="qty" placeholder="Quantity">
+<button onclick="calcBill()">Get Total</button>
+
+<p id="billResult">Total: </p>
+
+<script>
+  function calcBill() {
+    let p = Number(price.value);
+    let q = Number(qty.value);
+    let total = p * q;
+
+    billResult.innerText = "Total: " + total;
+  }
+</script>

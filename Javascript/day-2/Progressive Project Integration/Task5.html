@@ -1,0 +1,17 @@
+<input type="number" id="totalAmount" placeholder="Enter total amount">
+<button onclick="applyDiscount()">Apply Discount</button>
+
+<p id="finalAmount">Final Amount: </p>
+
+<script>
+  function applyDiscount() {
+    let amount = Number(totalAmount.value);
+
+    if (amount >= 500) {
+      let discounted = amount * 0.9; // 10% discount
+      finalAmount.innerText = "Final Amount: " + discounted + " (10% discount applied)";
+    } else {
+      finalAmount.innerText = "Final Amount: " + amount + " (No discount)";
+    }
+  }
+</script>
