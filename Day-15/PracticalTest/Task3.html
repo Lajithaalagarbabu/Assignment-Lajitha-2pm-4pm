@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.pricing {
+  display: flex;
+  gap: 20px;
+}
+
+.plan {
+  border: 2px solid #ef0808;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .pricing {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="pricing">
+  <div class="plan" style="background-color: lightcoral;">Basic</div>
+  <div class="plan" style="background-color: cornflowerblue;">Pro</div>
+  <div class="plan" style="background-color:yellow">Premium</div>
+</div>
+
+</body>
+</html>
