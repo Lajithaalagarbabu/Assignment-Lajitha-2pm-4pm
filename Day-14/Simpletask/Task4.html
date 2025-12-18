@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-4</title>
+    <style>
+        .navbar {
+  display: flex;
+  flex-direction: row;      /* Horizontal by default */
+  background: #0f172a;
+  padding: 15px;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Change direction at 600px */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column; /* Vertical navbar */
+  }
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</nav>
+
+</body>
+</html>

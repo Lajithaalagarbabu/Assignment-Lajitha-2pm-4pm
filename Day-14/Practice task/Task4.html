@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.gallery img {
+  width: 200%;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <img src="https://unsplash.com/photos/a-close-up-of-a-sticker-on-the-side-of-a-car-bN_S1Fm1gOc">
+  <img src="https://unsplash.com/photos/gray-digital-device-at-0-2NPELgaCBb8">
+  <img src="https://unsplash.com/photos/white-printer-paper-on-black-surface-5ZbUWXT5vbg">
+  <img src="https://unsplash.com/photos/a-table-that-has-a-light-on-top-of-it-OBl1iZORl9Q">
+</div>
+
+</body>
+</html>

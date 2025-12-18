@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+header {
+  background: lightcoral;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.project {
+  background: lightgoldenrodyellow;
+  padding: 30px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>My Portfolio</h1>
+</header>
+
+<div class="projects">
+  <div class="project">Project 1</div>
+  <div class="project">Project 2</div>
+  <div class="project">Project 3</div>
+</div>
+
+</body>
+</html>
