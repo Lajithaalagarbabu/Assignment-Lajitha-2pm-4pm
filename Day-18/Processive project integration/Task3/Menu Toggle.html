@@ -1,0 +1,12 @@
+<button onclick="toggle()">Menu</button>
+<ul id="menu" style="display:none">
+  <li>Home</li>
+  <li>About</li>
+</ul>
+
+<script>
+function toggle() {
+  let menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "none" ? "block" : "none";
+}
+</script>

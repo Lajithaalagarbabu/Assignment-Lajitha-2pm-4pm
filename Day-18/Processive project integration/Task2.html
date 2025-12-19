@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="name" placeholder="Name">
+<input type="email" id="email" placeholder="Email">
+<button onclick="validate()">Submit</button>
+<p id="msg"></p>
+
+<script>
+function validate() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+
+  if (name === "" || email === "") {
+    document.getElementById("msg").innerText = "All fields required";
+  } 
+  else {
+    document.getElementById("msg").innerText = "Form submitted ";
+  }
+}
+</script>
+
+</body>
+</html>
