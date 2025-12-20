@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Logout</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    input, button {
+      margin: 5px 0;
+      padding: 6px;
+    }
+    button {
+      margin-right: 5px;
+    }
+    p {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h3>Login System</h3>
+
+<input type="text" id="username" placeholder="Username"><br>
+<input type="password" id="password" placeholder="Password"><br>
+
+<button onclick="user.login()">Login</button>
+<button onclick="user.logout()">Logout</button>
+
+<p id="msg"></p>
+
+<script>
+const user = {
+  correctUser: "admin",
+  correctPass: "1234",
+  isLoggedIn: false,
+
+  login: function () {
+    let uname = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if (uname === "" || pass === "") {
+      document.getElementById("msg").innerText = "Enter username & password ";
+      return;
+    }
+
+    if (uname === this.correctUser && pass === this.correctPass) {
+      this.isLoggedIn = true;
+      document.getElementById("msg").innerText = "Login Successful ";
+    } else {
+      document.getElementById("msg").innerText = "Invalid credentials ";
+    }
+  },
+
+  logout: function () {
+    if (this.isLoggedIn) {
+      this.isLoggedIn = false;
+      document.getElementById("msg").innerText = "Logged out successfully";
+    } else {
+      document.getElementById("msg").innerText = "You are not logged in";
+    }
+  }
+};
+</script>
+
+</body>
+</html>
