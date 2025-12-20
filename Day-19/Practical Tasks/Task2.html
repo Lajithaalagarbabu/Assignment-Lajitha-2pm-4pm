@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Greeting System</h3>
+
+<input type="text" id="name" placeholder="Enter your name">
+<button onclick="greet()">Greet</button>
+
+<p id="output"></p>
+
+<script>
+function greet() {
+  let name = document.getElementById("name").value;
+
+  if (name === "") {
+    document.getElementById("output").innerText = "Please enter your name";
+  } else {
+    document.getElementById("output").innerText = "Hello, " + name + "!";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Calculator</h3>
+<input type="number" id="a" placeholder="Number 1">
+<input type="number" id="b" placeholder="Number 2">
+<button onclick="add()">Add</button>
+<p id="calcResult"></p>
+
+<hr>
+
+<h3>Form Validation</h3>
+<input type="text" id="name" placeholder="Enter name">
+<button onclick="validate()">Submit</button>
+<p id="formResult"></p>
+
+<hr>
+
+<h3>Loop Output</h3>
+<button onclick="printNumbers()">Print 1–5</button>
+<p id="loopResult"></p>
+
+<script>
+// Calculator function
+function add() {
+  let a = Number(document.getElementById("a").value);
+  let b = Number(document.getElementById("b").value);
+  document.getElementById("calcResult").innerText = a + b;
+}
+
+// Form validation function
+function validate() {
+  let name = document.getElementById("name").value;
+  document.getElementById("formResult").innerText =
+    name === "" ? "Enter your name" : "Form submitted";
+}
+
+// Loop function
+function printNumbers() {
+  let output = "";
+  for (let i = 1; i <= 5; i++) {
+    output += i + " ";
+  }
+  document.getElementById("loopResult").innerText = output;
+}
+</script>
+
+</body>
+</html>
