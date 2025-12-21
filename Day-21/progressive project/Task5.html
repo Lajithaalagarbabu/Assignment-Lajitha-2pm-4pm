@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    .products, .cart {
+      margin-bottom: 20px;
+    }
+    button {
+      margin-left: 10px;
+    }
+    li {
+      margin: 6px 0;
+    }
+    .total {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Products</h2>
+<ul class="products">
+  <li>Pen - ₹50 <button onclick="addToCart('Pen',50)">Add</button></li>
+  <li>Book - ₹200 <button onclick="addToCart('Book',200)">Add</button></li>
+  <li>Bottle - ₹300 <button onclick="addToCart('Bottle',300)">Add</button></li>
+  <li>Bag - ₹450 <button onclick="addToCart('Bag',450)">Add</button></li>
+</ul>
+
+<h2>My Cart</h2>
+<ul class="cart" id="cartList"></ul>
+
+<p class="total" id="total">Total: ₹0</p>
+
+<script>
+let cart = [];
+
+// Add product
+function addToCart(name, price) {
+  cart.push({ name, price });
+  renderCart();
+}
+
+// Remove product
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  renderCart();
+}
+
+// Show cart & calculate total
+function renderCart() {
+  let list = document.getElementById("cartList");
+  list.innerHTML = "";
+
+  cart.forEach((item, index) => {
+    let li = document.createElement("li");
+    li.innerHTML = `${item.name} - ₹${item.price}
+      <button onclick="removeFromCart(${index})">Cancel</button>`;
+    list.appendChild(li);
+  });
+
+  let total = cart.reduce((sum, item) => sum + item.price, 0);
+  document.getElementById("total").innerText = "Total: ₹" + total;
+}
+</script>
+
+</body>
+</html>

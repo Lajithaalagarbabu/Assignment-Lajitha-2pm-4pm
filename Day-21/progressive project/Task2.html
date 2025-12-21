@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lajitha | Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f8fafc;
+      color: #020617;
+    }
+
+    header {
+      background: #de8dea;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    section {
+      padding: 30px;
+      margin: 20px;
+      background: white;
+      border-radius: 8px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #0f172a;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+    }
+
+    .skill {
+      background: #efacf0;
+      box-shadow: 2px 2px grey;
+      padding: 12px;
+      text-align: center;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .project-card {
+      border: 1px solid #cbd5f5;
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    /* CONTACT */
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #ab0ee9;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #020617;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🔹 HEADER -->
+<header>
+  <h1>Lajitha Alagarbabu</h1>
+  <p>Full Stack Developer | Java | Web Development</p>
+</header>
+
+<!-- 🔹 ABOUT -->
+<section>
+  <h2>About Me</h2>
+  <p>
+    I am a passionate Full Stack Developer from Madurai.
+    I enjoy building responsive websites and learning new technologies.
+    My goal is to grow as a Java Developer and create user-friendly applications.
+  </p>
+</section>
+
+<!-- 🔹 SKILLS -->
+<section>
+  <h2>Skills</h2>
+  <div class="skills-grid" id="skills"></div>
+</section>
+
+<!-- 🔹 PROJECTS -->
+<section>
+  <h2>Projects</h2>
+  <div class="projects" id="projects"></div>
+</section>
+
+<!-- 🔹 EDUCATION -->
+<section>
+  <h2>Education</h2>
+  <p><strong>B.Tech - Computer Science & Business Systems</strong></p>
+  <p>Sethu Institute of Technology (2021 – 2025)</p>
+</section>
+
+<!-- 🔹 CONTACT -->
+<section>
+  <h2>Contact Me</h2>
+  <input type="text" placeholder="Your Name">
+  <input type="email" placeholder="Your Email">
+  <textarea placeholder="Your Message"></textarea>
+  <button onclick="send()">Send</button>
+  <p id="msg"></p>
+</section>
+
+<!-- 🔹 FOOTER -->
+<footer>
+  © 2025 Lajitha | Portfolio
+</footer>
+
+<script>
+/* SKILLS DATA */
+let skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Java",
+  "React",
+  "Next.js",
+  "UI/UX (Figma)",
+  "Git & GitHub"
+];
+
+let skillsBox = document.getElementById("skills");
+
+skills.forEach(skill => {
+  let div = document.createElement("div");
+  div.className = "skill";
+  div.innerText = skill;
+  skillsBox.appendChild(div);
+});
+
+/* PROJECTS DATA */
+let projects = [
+  {
+    name: "Primary Health Care System",
+    desc: "Healthcare website using HTML, CSS, JS, Python (Django)."
+  },
+  {
+    name: "Portfolio Website",
+    desc: "Personal responsive portfolio website."
+  },
+  {
+    name: "Product Listing App",
+    desc: "Dynamic product listing using JavaScript."
+  }
+];
+
+let projectBox = document.getElementById("projects");
+
+projects.forEach(p => {
+  let div = document.createElement("div");
+  div.className = "project-card";
+  div.innerHTML = `<h4>${p.name}</h4><p>${p.desc}</p>`;
+  projectBox.appendChild(div);
+});
+
+/* CONTACT */
+function send() {
+  document.getElementById("msg").innerText =
+    "Message sent successfully ✅";
+}
+</script>
+
+</body>
+</html>

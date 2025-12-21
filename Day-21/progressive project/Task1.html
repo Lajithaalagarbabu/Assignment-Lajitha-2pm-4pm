@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      text-align: center;
+      border-radius: 6px;
+      box-shadow: 5px 5px grey;
+      background-color: lightcyan;
+    }
+
+  </style>
+</head>
+<body>
+
+<h2>Product List</h2>
+
+<div class="products" id="productContainer"></div>
+
+<script>
+let products = [
+  "Laptop",
+  "Mobile",
+  "Tablet",
+  "Headphones",
+  "Camera",
+  "Smart Watch"
+];
+
+let container = document.getElementById("productContainer");
+
+products.forEach(function (product) {
+  let div = document.createElement("div");
+  div.className = "card";
+  div.innerText = product;
+  container.appendChild(div);
+});
+</script>
+
+</body>
+</html>

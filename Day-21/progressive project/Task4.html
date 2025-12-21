@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Filter Example</title>
+</head>
+<body>
+
+<h3>Filter Products by Price</h3>
+
+<input type="number" id="priceInput" placeholder="Enter max price">
+<button onclick="filterProducts()">Filter</button>
+
+<ul id="productList"></ul>
+
+<script>
+let products = [
+  { name: "Pen", price: 50 },
+  { name: "Book", price: 200 },
+  { name: "Bottle", price: 300 },
+  { name: "Bag", price: 800 },
+  { name: "Shoes", price: 1200 }
+];
+
+function filterProducts() {
+  let maxPrice = document.getElementById("priceInput").value;
+  let ul = document.getElementById("productList");
+  ul.innerHTML = ""; // clear old list
+
+  let filtered = products.filter(p => p.price <= maxPrice);
+
+  if (filtered.length === 0) {
+    ul.innerHTML = "<li>No products found</li>";
+    return;
+  }
+
+  filtered.forEach(p => {
+    let li = document.createElement("li");
+    li.innerText = p.name + " - ₹" + p.price;
+    ul.appendChild(li);
+  });
+}
+</script>
+
+</body>
+</html>
