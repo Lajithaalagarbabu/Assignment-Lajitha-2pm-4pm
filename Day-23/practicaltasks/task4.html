@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form id="form">
+  <input type="text" id="username" placeholder="Username"><br>
+  <span id="userError" style="color:red"></span><br><br>
+
+  <input type="email" id="useremail" placeholder="Email"><br>
+  <span id="emailError" style="color:red"></span><br><br>
+
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    userError.innerText = "";
+    emailError.innerText = "";
+
+    if (username.value === "") {
+      userError.innerText = "Username is required";
+    }
+
+    if (useremail.value === "") {
+      emailError.innerText = "Email is required";
+    }
+  });
+</script>
+</body>
+</html>

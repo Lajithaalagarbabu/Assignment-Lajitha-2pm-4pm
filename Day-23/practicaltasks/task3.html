@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" id="name" placeholder="Name"><br><br>
+<input type="email" id="email" placeholder="Email"><br><br>
+
+<h4>Preview</h4>
+<p>Name: <span id="nameOut"></span></p>
+<p>Email: <span id="emailOut"></span></p>
+
+<script>
+  name.addEventListener("input", function() {
+    nameOut.innerText = this.value;
+  });
+
+  email.addEventListener("input", function() {
+    emailOut.innerText = this.value;
+  });
+</script>
+
+</body>
+</html>

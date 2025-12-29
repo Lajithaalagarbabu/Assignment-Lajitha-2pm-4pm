@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="box"
+     style="width:200px;height:150px;background:lightgray;text-align:center;line-height:150px;">
+  Hover 
+</div>
+<br>
+  
+  <div id="box2"
+     style="width:200px;height:150px;background:lightgray;text-align:center;line-height:150px;">
+  Clicked 
+</div>
+ <br>
+  <div id="box3"
+     style="width:200px;height:150px;background:lightgray;text-align:center;line-height:150px;">
+  double clicked 
+</div>
+ 
+<script>
+  const box = document.getElementById("box");
+
+  box.addEventListener("mouseover", () => {
+    box.style.backgroundColor = "orange";
+  });
+
+  const box2 = document.getElementById("box2");
+
+  box2.addEventListener("click", () => {
+    box2.style.backgroundColor = "green";
+  });
+
+const box3 = document.getElementById("box3");
+
+
+  box3.addEventListener("dblclick", () => {
+    box3.style.backgroundColor = "red";
+  });
+</script>
+</body>
+</html>

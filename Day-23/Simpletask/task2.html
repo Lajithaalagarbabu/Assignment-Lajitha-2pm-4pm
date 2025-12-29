@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse Events Example</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 150px;
+      /*background-color: rgb(243, 3, 3); */
+      text-align: center;
+      line-height: 150px;
+      font-size: 18px;
+      border: 2px solid #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="box"
+       onmouseover="changeColor()"
+       onmouseout="resetColor()">
+    Hover me
+  </div>
+
+  <script>
+    function changeColor() {
+      document.getElementById("box").style.backgroundColor = "skyblue";
+    }
+
+    function resetColor() {
+      document.getElementById("box").style.backgroundColor = "lightyellow";
+    }
+  </script>
+
+</body>
+</html>
