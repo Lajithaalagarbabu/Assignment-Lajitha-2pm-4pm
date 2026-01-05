@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Friendly Errors</title>
+  <style>
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .success {
+      color: green;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h3>Login Form</h3>
+
+<input type="text" id="username" placeholder="Username">
+<div id="userError" class="error"></div><br>
+
+<input type="password" id="password" placeholder="Password">
+<div id="passError" class="error"></div><br>
+
+<button onclick="validate()">Login</button>
+<div id="successMsg" class="success"></div>
+
+<script>
+function validate() {
+  // Clear old messages
+  document.getElementById("userError").innerText = "";
+  document.getElementById("passError").innerText = "";
+  document.getElementById("successMsg").innerText = "";
+
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  let hasError = false;
+
+  if (user === "") {
+    document.getElementById("userError").innerText =
+      "Please enter your username";
+    hasError = true;
+  }
+
+  if (pass === "") {
+    document.getElementById("passError").innerText =
+      "Password cannot be empty";
+    hasError = true;
+  } else if (pass.length < 6) {
+    document.getElementById("passError").innerText =
+      "Password must be at least 6 characters";
+    hasError = true;
+  }
+
+  if (!hasError) {
+    document.getElementById("successMsg").innerText =
+      "Login successful ";
+  }
+}
+</script>
+
+</body>
+</html>

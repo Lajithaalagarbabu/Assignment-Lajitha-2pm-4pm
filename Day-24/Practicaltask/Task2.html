@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Error Example</title>
+</head>
+<body>
+
+<input type="text" id="name" placeholder="Enter your name">
+<button onclick="validateForm()">Submit</button>
+
+<script>
+function validateForm() {
+  try {
+    let name = document.getElementById("name").value;
+
+    if (name === "") {
+      throw "Name field cannot be empty";
+    }
+
+    alert("Form submitted successfully");
+  } catch (error) {
+    alert("Error: " + error);
+  }
+}
+</script>
+
+</body>
+</html>
