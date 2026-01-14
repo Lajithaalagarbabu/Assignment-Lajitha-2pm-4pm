@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Async Login Demo</title>
+</head>
+<body>
+
+<button onclick="handleLoginClick()">Login</button>
+
+<script>
+  // 1️⃣ Private state using closure
+  function createUserStore() {
+    let user = null;
+
+    return {
+      setUser(data) {
+        user = data;
+      },
+      getUser() {
+        return user;
+      }
+    };
+  }
+
+  const userStore = createUserStore();
+
+  // 2️⃣ Fake API (later replace with real fetch)
+  function apiRequest(url) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (url === "/login") {
+          resolve({ name: "Admin", token: "abc123" });
+        } else {
+          reject("API Error");
+        }
+      }, 1500);
+    });
+  }
+
+  // 3️⃣ Auth Service
+  async function login(username, password) {
+    try {
+      const userData = await apiRequest("/login");
+      userStore.setUser(userData);
+      return userData;
+    } catch {
+      throw "Login failed";
+    }
+  }
+
+  // 4️⃣ UI Controller (non-blocking)
+  async function handleLoginClick() {
+    try {
+      console.log("Logging in...");
+      const user = await login("admin", "1234");
+      console.log("Welcome", user.name);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+</script>
+
+</body>
+</html>
