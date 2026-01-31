@@ -1,0 +1,5 @@
+Entry file in a React project
+
+📁 index.js (or main.jsx in Vite projects)
+
+👉 This file is where the React app starts rendering to the browser.
