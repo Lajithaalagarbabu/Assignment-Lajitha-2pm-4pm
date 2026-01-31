@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Data App</title>
+</head>
+<body>
+
+  <h2>User Emails</h2>
+
+  <button onclick="fetchUsers()">Fetch Users</button>
+  <p id="loading"></p>
+
+  <ul id="userList"></ul>
+
+  <script>
+    const userList = document.getElementById("userList");
+    const loadingText = document.getElementById("loading");
+
+    function fetchUsers() {
+      loadingText.textContent = "Loading data...";
+      userList.innerHTML = "";
+
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then(response => response.json())
+        .then(users => {
+          loadingText.textContent = "";
+
+          // Save first user name in localStorage
+          localStorage.setItem(
+            "savedUser",
+            JSON.stringify(users[0].name)
+          );
+
+          users.forEach(user => {
+            const li = document.createElement("li");
+            li.textContent = user.email;
+            userList.appendChild(li);
+          });
+        })
+        .catch(error => {
+          loadingText.textContent = "Failed to load data";
+          console.error(error);
+        });
+    }
+
+    // Retrieve saved data on reload
+    const savedUser = JSON.parse(localStorage.getItem("savedUser"));
+    if (savedUser) {
+      console.log("Saved User:", savedUser);
+    }
+  </script>
+
+</body>
+</html>
